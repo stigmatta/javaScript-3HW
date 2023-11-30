@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!-- Задание 1
+        <script>
+            document.write("<br>");
+            function compare(a,b)
+            {
+                if(a==b)
+                    return 0;
+                return a > b ? 1:-1;
+            }
+            document.write(compare(3,2));
+        </script>
+        ----------------------------------------------------------- -->
+
+
+        <!-- Задание 2
+        <script>
+            document.write("<br>");
+            function factorial(a){
+                let result=1;
+                for(let i =1;i<=a;i++)
+                    result*=i;
+                return result;
+            }
+            document.write(factorial(5));
+        </script>
+        ----------------------------------------------------------- -->
+
+        <!-- Задание 3
+        <script>
+            document.write("<br>");
+            function concatDigits()
+            {
+                let string = "";
+                for(let i = 0;i<arguments.length;i++)
+                    string+=arguments[i];
+                return string;
+            }
+            document.write(concatDigits(1,2,3));
+        </script>
+        ----------------------------------------------------------- -->
+
+        <!-- Задание 4
+        <script>
+            document.write("<br>");
+            function area()
+            {
+                if(arguments.length==1)
+                    return arguments[0]*arguments[0];
+                else if(arguments.length==2)
+                    return arguments[0]*arguments[1];
+                else
+                    return "Некорректное кол-во переданных аргументов";
+            }
+            document.write(area(5));
+        </script>
+        ----------------------------------------------------------- -->
+
+        <!-- Задание 5 и 6
+        <script>
+            document.write("<br>");
+            function absoluteDigit(a)
+            {
+                let sum=0;
+                for(let i = 1;i<a;i++)
+                {
+                    if(a%i==0)
+                        sum+=i;
+                }
+                if(sum==a)
+                    return a;
+                else return ' ';
+            }
+            function absoluteDigitsInRange(a,b)
+            {
+                let min = a<b?a:b;
+                let max = a>b?a:b;
+                for(let i = min;i<=max;i++)
+                    document.write(absoluteDigit(i));
+            }
+            absoluteDigitsInRange(6,500);
+        </script>
+        ----------------------------------------------------------- -->
+
+        <!-- Задание 7 
+        <script>
+            document.write("<br>");
+            function timeInString() {
+            let string = "";
+            if (arguments.length > 3)
+                return "Некорректное количество параметров";
+
+            if (arguments.length == 1) {
+                if (arguments[0] < 0 || arguments[0] > 23)
+                    return "Некорректное количество часов";
+                else {
+                    if (arguments[0] < 10)
+                        string += '0';
+                    string += arguments[0] + ":00:00";
+                }
+            } else if (arguments.length == 2) {
+                if (arguments[0] < 0 || arguments[0] > 23 || arguments[1] < 0 || arguments[1] > 59)
+                    return "Некорректно введенное время";
+                else {
+                    if (arguments[0] < 10)
+                        string += '0';
+                    string += arguments[0] + ':';
+                    if (arguments[1] < 10)
+                        string += '0';
+                    string += arguments[1] + ":00";
+                }
+            } else if (arguments.length == 3) {
+                if (arguments[0] < 0 || arguments[0] > 23 || arguments[1] < 0 || arguments[1] > 59 || arguments[2] < 0 || arguments[2] > 59)
+                    return "Некорректно введенное время";
+                else {
+                    if (arguments[0] < 10)
+                        string += '0';
+                    string += arguments[0] + ':';
+                    if (arguments[1] < 10)
+                        string += '0';
+                    string += arguments[1] + ':';
+                    if (arguments[2] < 10)
+                        string += '0';
+                    string += arguments[2];
+                }
+            }
+            return string;
+        }
+             document.write(timeInString(5, 4, 4));
+        </script>
+        ----------------------------------------------------------- -->
+
+        <!-- Задание 8
+        <script>
+            document.write("<br>");
+            function toSeconds(hours,minutes,seconds)
+            {
+                return hours*3600 + minutes*60+seconds;
+            }
+            document.write(toSeconds(2,0,120));
+        </script>
+        ----------------------------------------------------------- -->
+
+        <!-- Задание 9
+        <script>
+            document.write("<br>");
+            function fromSeconds(seconds) {
+                let string = "";
+
+                if (seconds > 86400) { // 86400 секунд в сутках
+                    return "Слишком много секунд";
+                } else {
+                    let hours = Math.floor(seconds / 3600);
+                    let minutes = Math.floor((seconds % 3600) / 60);
+                    let remainingSeconds = seconds % 60;
+
+                    if (hours < 10)
+                        string += '0';
+                    string += hours + ':';
+
+                    if (minutes < 10)
+                        string += '0';
+                    string += minutes + ':';
+
+                    if (remainingSeconds < 10)
+                        string += '0';
+                    string += remainingSeconds;
+                }
+
+                return string;
+            }
+
+            document.write(fromSeconds(8325)); 
+        </script>
+        ----------------------------------------------------------- -->
+
+        Задание 10
+        <script>
+             function toSeconds(hours,minutes,seconds)
+            {
+                return hours*3600 + minutes*60+seconds;
+            }
+            function fromSeconds(seconds) {
+                let string = "";
+
+                if (seconds > 86400) { // 86400 секунд в сутках
+                    return "Слишком много секунд";
+                } else {
+                    let hours = Math.floor(seconds / 3600);
+                    let minutes = Math.floor((seconds % 3600) / 60);
+                    let remainingSeconds = seconds % 60;
+
+                    if (hours < 10)
+                        string += '0';
+                    string += hours + ':';
+
+                    if (minutes < 10)
+                        string += '0';
+                    string += minutes + ':';
+
+                    if (remainingSeconds < 10)
+                        string += '0';
+                    string += remainingSeconds;
+                }
+
+                return string;
+            }
+            function twoDatesDifference(hours1,minutes1,seconds1,hours2,minutes2,seconds2)
+            {
+                let firstDateSecs = toSeconds(hours1,minutes1,seconds1);
+                let secondDateSecs = toSeconds(hours2,minutes2,seconds2);
+                let secDifference = Math.abs(firstDateSecs-secondDateSecs);
+                return fromSeconds(secDifference);
+            }
+            document.write(twoDatesDifference(1,1,1,3,3,3));
+        </script>
+    </body>
+</html>
